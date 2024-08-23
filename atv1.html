@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+       
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+       
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+       
+            <label for="password">Senha:</label>
+            <input type="password" id="senha" name="senha"> 
+    </form>
+    <button type="submit" id="btn">Cadastrar</button>
+
+    <script>
+
+
+        document.getElementById('btn').addEventListener('click', enviar)
+         
+
+        function enviar(){
+ 
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let senha = document.getElementById('senha').value.trim();
+
+            // Verifica se todos os campos foram preenchidos
+            if (name === '' || email === '' || senha === '') {
+                alert('Todos os campos devem ser preenchidos!');
+            } else {
+                alert('Formulário enviado com sucesso!');
+            }
+        }
+           
+    
+    </script>
+</body>
+</html>

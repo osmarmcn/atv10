@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <input type="text" id="texto" name="texto">
+        </div>
+       
+    </form>
+     <button type="button" id="btn">Adicionar</button>
+     <div id="output"></div>
+
+     <script>
+         document.getElementById('btn').addEventListener('click', validar)
+
+        function validar() {
+            const texto = document.getElementById('texto').value.trim()
+            
+            if (texto !== '') {
+                const newItem = document.createElement('div')
+                newItem.classList.add('item')
+                newItem.textContent = texto
+                
+                document.getElementById('output').appendChild(newItem)
+                
+                document.getElementById('texto').value = ''
+            } else {
+                alert('O campo de texto está vazio!')
+            }
+        }
+           
+        
+     </script>
+</body>
+</html>

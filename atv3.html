@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somarArray(array) {
+           
+            if (!Array.isArray(array) || array.length === 0) {
+                return 0
+            }
+            
+            return array.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0)
+        }
+
+        const numeros = [1, 2, 3, 4, 5]
+        console.log(somarArray(numeros))
+
+    </script>
+</body>
+</html>
